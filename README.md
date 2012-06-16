@@ -18,10 +18,6 @@ eco.render("Hello <%= @name %>", name="world")
 # Out: u'Hello world'
 ```
 
-Requirements
-------------
-* CoffeeScript
-
 Setup
 -----
 ```bash

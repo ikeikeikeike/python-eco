@@ -2,12 +2,14 @@ import os
 from setuptools import setup
 
 
-version = '0.9'
+version = '0.9.1'
 name = 'eco'
 short_description = 'Python Eco is a bridge to the ECO(CoffeeScript Template) compiler.'
 long_description = """\
 
-Python Eco is a bridge to the `Eco <https://github.com/sstephenson/eco>`_ (CoffeeScript Template) compiler.
+
+Python Eco is a bridge to the  `Eco <https://github.com/sstephenson/eco>`_  (CoffeeScript Template) compiler.
+
 
 **Python Eco**
 ===============
@@ -26,9 +28,6 @@ Python Eco is a bridge to the `Eco <https://github.com/sstephenson/eco>`_ (Coffe
     eco.render("Hello <%= @name %>", name="world")
     # Out: u'Hello world'
 
-Requirements
-============
-* CoffeeScript
 
 Setup
 =====
@@ -40,7 +39,7 @@ Setup
 
 History
 ========
-0.9 (2012-06-17)
+0.9.x (2012-06-17)
 ~~~~~~~~~~~~~~~~~
 * first release
 
@@ -81,7 +80,7 @@ setup(
     license='MIT License',
     packages=['eco'],
     package_dir={'eco': 'eco'},
-    package_data={'eco': ['eco.js', '__init__.py'],},
+    package_data={'eco': ['eco.js', '__init__.py']},
     py_modules=['eco'],
     install_requires=['CoffeeScript'],
     test_suite="test_eco",
