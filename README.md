@@ -24,9 +24,7 @@ Requirements
 Setup
 -----
 ```bash
-
-    $ pip install eco
-
+$ pip install eco
 ```
 
 History
