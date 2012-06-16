@@ -4,32 +4,13 @@ from setuptools import setup
 
 version = '0.9'
 name = 'eco'
-short_description = 'python-eco is a bridge to the ECO Template compiler'
+short_description = 'Python Eco is a bridge to the ECO(CoffeeScript Template) compiler.'
 long_description = """\
-``python-eco is a bridge to the ECO Template compiler.``
 
-Description
-===========
-python-eco is a bridge to the ECO Template compiler.
-
-Requirements
-============
-* CoffeeScript
-
-Setup
-=====
-
-.. highlight:: bash
-
-::
-
-    $ pip install eco
-
+Python Eco is a bridge to the `Eco <https://github.com/sstephenson/eco>`_ (CoffeeScript Template) compiler.
 
 **Python Eco**
-~~~~~~~~~~~~~~~
-
-.. highlight:: python
+===============
 
 ::
 
@@ -44,6 +25,17 @@ Setup
 
     eco.render("Hello <%= @name %>", name="world")
     # Out: u'Hello world'
+
+Requirements
+============
+* CoffeeScript
+
+Setup
+=====
+
+::
+
+    $ pip install eco
 
 
 History
@@ -69,16 +61,16 @@ setup(
     classifiers=[
        "Development Status :: 4 - Beta",
        "Development Status :: 5 - Production/Stable",
-       'Environment :: Console'
+       'Environment :: Console',
        "Environment :: Web Environment",
        "Intended Audience :: Developers",
        'License :: OSI Approved :: MIT License',
-       "Programming Language :: Python :: 2"
+       "Programming Language :: Python :: 2",
        "Programming Language :: Python :: 2.6",
        "Programming Language :: Python :: 2.7",
-       "Programming Language :: Python :: 3"
-       "Programming Language :: Python :: 3.1"
-       "Programming Language :: Python :: 3.2"
+       "Programming Language :: Python :: 3",
+       "Programming Language :: Python :: 3.1",
+       "Programming Language :: Python :: 3.2",
        'Topic :: Utilities',
        'Topic :: Software Development :: Libraries :: Python Modules',
     ],

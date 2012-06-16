@@ -1,7 +1,8 @@
 Python Eco
 ===========
 
-python-eco is a bridge to the [Eco](https://github.com/sstephenson/eco)  Template compiler.
+
+Python Eco is a bridge to the [Eco](https://github.com/sstephenson/eco) (CoffeeScript Template) compiler.
 
 ```python
 import eco
