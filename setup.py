@@ -16,10 +16,6 @@ Requirements
 ============
 * CoffeeScript
 
-Features
-========
-
-
 Setup
 =====
 
@@ -40,14 +36,14 @@ Setup
     import eco
 
     eco.compile(open("template.eco"))
-    # => "function(...) {...}"
+    # Out: u"function(...) {...}"
 
     context = eco.context_for("Hello <%= @name %>")
     context.call("render", {"name": "Sam"})
-    # > u'Hello Sam'
+    # Out: u'Hello Sam'
 
     eco.render("Hello <%= @name %>", name="world")
-    # > u'Hello world'
+    # Out: u'Hello world'
 
 
 History
