@@ -1,53 +1,10 @@
 import os
 from setuptools import setup
 
-
-version = '0.9.1'
 name = 'eco'
+version = '0.9.3'
 short_description = 'Python Eco is a bridge to the ECO(CoffeeScript Template) compiler.'
-long_description = """\
-
-
-Python Eco is a bridge to the  `Eco <https://github.com/sstephenson/eco>`_  (CoffeeScript Template) compiler.
-
-
-**Python Eco**
-===============
-
-::
-
-    import eco
-
-    eco.compile(open("template.eco"))
-    # Out: u"function(...) {...}"
-
-    context = eco.context_for("Hello <%= @name %>")
-    context.call("render", {"name": "Sam"})
-    # Out: u'Hello Sam'
-
-    eco.render("Hello <%= @name %>", name="world")
-    # Out: u'Hello world'
-
-
-Setup
-=====
-
-::
-
-    $ pip install eco
-
-
-History
-========
-0.9.x (2012-06-17)
-~~~~~~~~~~~~~~~~~
-* first release
-
-License
-========
-MIT License
-"""
-
+long_description = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
 root_dir = os.path.dirname(__file__)
 if root_dir != '':
     os.chdir(root_dir)
@@ -74,14 +31,13 @@ setup(
        'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     keywords=['javascript', 'coffeescript', 'eco', 'compiler'],
+    packages=['eco'],
+    package_dir={'eco': 'eco'},
+    package_data={'eco': ['eco.js']},
+    install_requires=['CoffeeScript'],
+    test_suite="test_eco",
     author='Tatsuo Ikeda',
     author_email='jp.ne.co.jp at gmail',
     url='https://github.com/ikeikeikeike/python-eco',
     license='MIT License',
-    packages=['eco'],
-    package_dir={'eco': 'eco'},
-    package_data={'eco': ['eco.js']},
-    py_modules=['eco'],
-    install_requires=['CoffeeScript'],
-    test_suite="test_eco",
 )
