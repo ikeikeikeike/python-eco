@@ -80,7 +80,7 @@ setup(
     license='MIT License',
     packages=['eco'],
     package_dir={'eco': 'eco'},
-    package_data={'eco': ['eco.js', '__init__.py']},
+    package_data={'eco': ['eco.js']},
     py_modules=['eco'],
     install_requires=['CoffeeScript'],
     test_suite="test_eco",
