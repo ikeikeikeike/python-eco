@@ -1,1 +1,1 @@
-include eco/eco.jsinclude README.mdinclude test_eco.pyinclude tox.iniinclude LICENSEinclude MANIFEST.in
+include eco/eco.jsinclude README.mdinclude test_eco.pyinclude tox.iniinclude LICENSEinclude MANIFEST.ininclude HISTORY.rst
