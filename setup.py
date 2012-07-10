@@ -2,7 +2,7 @@ import os
 from setuptools import setup
 
 name = 'eco'
-version = '0.9.3'
+version = '0.9.4'
 short_description = 'Python Eco is a bridge to the ECO(CoffeeScript Template) Compiler.'
 long_description = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
 root_dir = os.path.dirname(__file__)

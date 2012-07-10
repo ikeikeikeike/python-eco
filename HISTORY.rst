@@ -2,9 +2,13 @@ History
 ========
 0.9 (2012-06-17)
 -----------------
-* first release
+* First release.
 
 0.9.2 (2012-06-18)
------------------
-* added tox test
-* fix setup module.
+-------------------
+* Added tox test.
+* Fix setup module.
+
+0.9.4 (2012-07-10)
+-------------------
+* Support unicode template.
