@@ -1,5 +1,6 @@
 import re
 import os
+import six
 import execjs
 import coffeescript
 
@@ -7,6 +8,7 @@ EngineError = execjs.RuntimeError
 CompilationError = execjs.ProgramError
 bundled_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "eco.js")
 version_ptn = re.compile(".+Eco Compiler (.*).*")
+
 
 class Source(object):
 
@@ -49,12 +51,15 @@ source = Source()
 def version():
     return source.version
 
+
 def compile(template):
     template_ = template.read() if hasattr(template, "read") else template
     return source.context.call("eco.precompile", template_)
 
+
 def context_for(template):
-    return execjs.compile(u"var render = {0}".format(compile(template)))
+    return execjs.compile(six.u("var render = {0}").format(compile(template)))
+
 
 def render(template, **locals_kw):
     return context_for(template).call("render", locals_kw)

@@ -33,7 +33,7 @@ setup(
     packages=['eco'],
     package_dir={'eco': 'eco'},
     package_data={'eco': ['eco.js']},
-    install_requires=['CoffeeScript'],
+    install_requires=['CoffeeScript', 'six'],
     test_suite="test_eco",
     author='Tatsuo Ikeda',
     author_email='jp.ne.co.jp at gmail',
