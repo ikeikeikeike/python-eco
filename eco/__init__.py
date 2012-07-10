@@ -54,7 +54,7 @@ def compile(template):
     return source.context.call("eco.precompile", template_)
 
 def context_for(template):
-    return execjs.compile("var render = {0}".format(compile(template)))
+    return execjs.compile(u"var render = {0}".format(compile(template)))
 
 def render(template, **locals_kw):
     return context_for(template).call("render", locals_kw)

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 try:
     from StringIO import StringIO
 except ImportError:
@@ -34,7 +36,7 @@ def test_context_for():
 def test_render():
     assert "Hello " == eco.render("Hello <%= @name %>")
     assert "Hello Sam" == eco.render("Hello <%= @name %>", name="Sam")
-
+    assert u"Hello « Rémi »" == eco.render(u"Hello « <%= @name %> »", name=u"Rémi")
 
 def test_runtime_error():
     context = eco.context_for("Hello <% throw 'foo' %>")
