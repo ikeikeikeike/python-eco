@@ -32,7 +32,7 @@ class Source(object):
 
     @property
     def combined_contents(self):
-        return ";\n".join([coffeescript._default_compiler_script(), self.contents])
+        return ";\n".join([coffeescript.get_compiler_script(), self.contents])
 
     @property
     def version(self):
